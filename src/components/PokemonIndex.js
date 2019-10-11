@@ -8,13 +8,14 @@ class PokemonPage extends React.Component {
   render() {
     return (
       <div>
+        <PokemonForm />
+        <br />
         <h1>Pokemon Searcher</h1>
         <br />
         <Search onSearchChange={_.debounce(() => console.log('🤔'), 500)} showNoResults={false} />
         <br />
         <PokemonCollection />
         <br />
-        <PokemonForm />
       </div>
     )
   }
